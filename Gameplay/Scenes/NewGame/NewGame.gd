@@ -12,4 +12,5 @@ func _onPlayBotButtonPressed():
 	get_tree().change_scene_to_file("res://Gameplay/Scenes/MainGameLoop/Game/Game.tscn")
 
 func _ready():
+	PlayBotButton.pressed.connect(self._onPlayBotButtonPressed)
 	BackButton.pressed.connect(self._onBackButtonPressed)
