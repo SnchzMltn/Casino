@@ -1,6 +1,9 @@
 extends Node
 
-@onready var MainNode = get_node("/root/Main")
+@onready var MainNode := get_node("/root/Main")
+@onready var NewGameButton := get_node("NewGameButton")
+@onready var OptionsButton := get_node("OptionsButton")
+@onready var ExitButton := get_node("ExitButton")
 
 enum gameStates { MAIN_SCREEN, PLAYING, SCORE_SCREEN }
 
@@ -15,10 +18,6 @@ func updateGameState(newState: gameStates):
 	else:
 		push_error("Invalid game state")
 
-func _on_button_pressed():
-	hideMenu()
-	#todo: start new game
-
 func showMenu():
 	$NewGameButton.show()
 	$OptionsButton.show()
@@ -29,7 +28,19 @@ func hideMenu():
 	$OptionsButton.hide()
 	$ExitButton.hide()
 
+func _newGameButtonPressed():
+	print("new game!!")
+	get_tree().change_scene_to_file("res://Gameplay/Scenes/NewGame/NewGame.tscn")
+
+func _optionsButtonPressed():
+	print("Options...")
+	#todo: implement a Scene for [get_tree().change_scene_to_file()]
+
+func _exitButtonPressed():
+	print("Exit")
+	get_tree().quit()
+
 func _ready():
-	var newGameButton = get_node("NewGameButton")
-	var optionsButton = get_node("OptionsButton")
-	var exitButton = get_node("ExitButton")
+	NewGameButton.pressed.connect(self._newGameButtonPressed)
+	OptionsButton.pressed.connect(self._optionsButtonPressed)
+	ExitButton.pressed.connect(self._exitButtonPressed)

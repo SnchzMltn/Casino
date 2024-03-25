@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c738aif3jilh1"]
+
+[ext_resource type="Texture2D" uid="uid://cn4yetvs6615j" path="res://assets/Image/Background/mossy-caves-layer-2.webp" id="1_3hwem"]
+[ext_resource type="Texture2D" uid="uid://bjvb1u8wfxvig" path="res://assets/Image/Background/8BitPitch.jpg" id="2_mwxu2"]
+
+[node name="Background" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="SideBorder" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(482.381, 360.946)
+rotation = 1.5708
+scale = Vector2(1.87443, 4.42453)
+texture = ExtResource("1_3hwem")
+
+[node name="Pitch" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(512.063, 354.507)
+rotation = 1.5708
+scale = Vector2(1, 1.327)
+texture = ExtResource("2_mwxu2")
