@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://de1cl4qecvuie"]
 
 [node name="Foreground" type="Node2D"]
+
+[node name="ExitButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Exit"

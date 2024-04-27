@@ -32,3 +32,6 @@ offset_top = 569.0
 offset_right = 197.0
 offset_bottom = 600.0
 text = "<-- Back"
+
+[connection signal="pressed" from="PlayBotButton" to="." method="_onPlayBotButtonPressed"]
+[connection signal="pressed" from="BackButton" to="." method="_onBackButtonPressed"]

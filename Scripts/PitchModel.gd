@@ -7,10 +7,10 @@ enum weatherTypes { SUNNY, RAIN, STORM, CLOUDY }
 @onready var weather: weatherTypes
 @onready var pitchAreas: Dictionary
 
-@onready var playerTeam: Array
+@onready var playerTeam: Array # Player[]
 #@onready var playerFormation: PlayerFormation
 
-@onready var opponentTeam: Array
+@onready var opponentTeam: Array # Player[]
 #@onready var playerFormation: PlayerFormation
 
 

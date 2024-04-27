@@ -5,7 +5,8 @@ class_name Deck
 @onready var cards: Array # [CardModel.gd]
 @onready var cardCount = cards.size()
 
-#todo: implement constructor
-func _init():
+func _init(cards_p: Array):
+	if(cards_p.size() == 0):
+		cards = []
 	deckName = "New Deck"
-	cards = []
+	cards = cards_p

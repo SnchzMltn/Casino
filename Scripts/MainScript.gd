@@ -7,7 +7,7 @@ extends Node
 
 enum gameStates { MAIN_SCREEN, PLAYING, SCORE_SCREEN }
 
-var currGameState = gameStates.MAIN_SCREEN
+@export var currGameState = gameStates.MAIN_SCREEN
 
 func getGameState():
 	return currGameState
