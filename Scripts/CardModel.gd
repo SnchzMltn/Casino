@@ -3,10 +3,12 @@ class_name Card
 
 enum CardTypeEnum { OFFENSIVE, DEFENSIVE } # todo: include TACTICAL?
 
-@onready var cardName: String
+@export var cardName: String
 #@onready var cardImage: String (file address?)
-@onready var cardType: CardTypeEnum
-@onready var cardEffect: CardEffect
+@export var cardType: CardTypeEnum
+@export var cardEffect: CardEffect
+@export var xCoordinate: float = 0.0 #todo: replace with transform.position?
+@export var yCoordinate: float = 0.0 #todo: replace with transform.position?
 
 func _init(name: String, type: CardTypeEnum, effect: CardEffect):
 	cardName = name

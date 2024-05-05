@@ -10,11 +10,11 @@ static var d1CardArray: Array = [
 ]
 
 static var d2CardArray: Array = [
-	Card.new("card1", Card.CardTypeEnum.OFFENSIVE, CardEffect.new({})),
-	Card.new("card2", Card.CardTypeEnum.DEFENSIVE, CardEffect.new({})),
-	Card.new("card3", Card.CardTypeEnum.OFFENSIVE, CardEffect.new({})),
-	Card.new("card4", Card.CardTypeEnum.DEFENSIVE, CardEffect.new({})),
-	Card.new("card5", Card.CardTypeEnum.OFFENSIVE, CardEffect.new({})),
+	Card.new("card6", Card.CardTypeEnum.DEFENSIVE, CardEffect.new({})),
+	Card.new("card7", Card.CardTypeEnum.DEFENSIVE, CardEffect.new({})),
+	Card.new("card8", Card.CardTypeEnum.DEFENSIVE, CardEffect.new({})),
+	Card.new("card9", Card.CardTypeEnum.DEFENSIVE, CardEffect.new({})),
+	Card.new("card10", Card.CardTypeEnum.DEFENSIVE, CardEffect.new({})),
 ]
 
 static func _get_random_card_array() -> Array:

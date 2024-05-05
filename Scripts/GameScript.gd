@@ -30,12 +30,6 @@ func _init():
 	turn = 0
 	turnTimer = Timer.new()
 	gameTimer.one_shot = true
-	
-	for card in playerHand:
-		var cardInstance := Card.new(card.Name, card.CardType, card.CardEffect)
-		# todo: expected to add a card isntance to the Foreground scene...
-		# there must be some way to update the scene or something...
-		foregroundNode.add_child(cardInstance)
 
 func _serveCardsToPlayers(deck: Deck):
 	return deck.cards.slice(0, 5)
@@ -45,7 +39,8 @@ func _takeTurn(cardPlayed: Card):
 	pass
 
 func _process(delta):
-	# process mouse (cursor) -> determine if a card is being played
 	print(gameTimer.time_left)
 	print(gameTimer.is_stopped())
 	print(delta)
+	$Foreground.oponentCards = oponentHand
+	$Foreground.playerCards = playerHand
