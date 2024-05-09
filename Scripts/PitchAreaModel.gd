@@ -16,20 +16,21 @@ func _init():
 	goalChance = 0.0
 	status = PitchAreaStatusTypes.DRY #todo: dynamically inherit from the Pitch object, which has a weather attribute
 
-func addPlayer(player: Player):
-	pass
-
-func removePlayer(playerToRemove: Player):
-	pass
-
-func setChaosPercentage(newPercentage: float):
-	pass
-
-func setBallLoosePercentage(newPercentage: float):
-	pass
-
-func setGoalChance(newPercentage: float):
-	pass
-
-func setStatus(newStatus: PitchAreaStatusTypes):
-	pass
+# todo: implement possible methods
+#func addPlayer(player: Player):
+	#pass
+#
+#func removePlayer(playerToRemove: Player):
+	#pass
+#
+#func setChaosPercentage(newPercentage: float):
+	#pass
+#
+#func setBallLoosePercentage(newPercentage: float):
+	#pass
+#
+#func setGoalChance(newPercentage: float):
+	#pass
+#
+#func setStatus(newStatus: PitchAreaStatusTypes):
+	#pass
