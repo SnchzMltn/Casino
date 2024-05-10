@@ -6,13 +6,22 @@ class_name Foreground
 @export var playerCards: Array
 @export var playerCardsXAxisAlign: float = 0.0 #todo: dynamically calculate based on resolution
 
-func _process(_delta):
-	for card: Card in oponentCards:
+func _ready():
+	for i in range(oponentCards.size()):
+		var card : Card = oponentCards[i]
+		# Layout is designed as:
+		# | ----------- total: 960px -------------- |
+		# |blank|card1|card2|card3|card4|card5|blank|
+		# |125px|142px|142px|142px|142px|142px|125px|
+		
+		# (1) Calculate X axis position dynamically
+		var cardPositionXAxis := ((DisplayServer.window_get_size().x - 250)/oponentCards.size()) * i
+		print_rich("[color=purple][b]New Card pos[/b] ---> "+str(cardPositionXAxis)+"[/color]")
 		var newInstance := Card.new_card(card)
-		print_rich("[color=blue][b]Upstream cardname[/b] -> "+str(card.cardName)+"[/color]")
-		#todo: I have access to the node, it's correct, I'm expecting to be able to access
-		# member attributes of the objet with reference Card:<Node2D#36087792847>
-		print_rich("[color=green][b]Current instance card node[/b] -> "+str(newInstance)+"[/color]")
+		# have to remove two and a half times the card_width
+		# todo: move these to constants
+		newInstance.position.x = cardPositionXAxis - (142 * 2.5)
+		# (2) todo: calculate Y axis position dynamically
 		add_child(newInstance)
 	# todo: do the same for the player hand
 

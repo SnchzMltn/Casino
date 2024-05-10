@@ -7,10 +7,8 @@ enum CardTypeEnum { OFFENSIVE, DEFENSIVE } # todo: include TACTICAL?
 #@onready var cardImage: String (file address?)
 @export var cardType: CardTypeEnum
 @export var cardEffect: CardEffect
-@export var xCoordinate: float = 0.0 #todo: replace with transform.position?
-@export var yCoordinate: float = 0.0 #todo: replace with transform.position?
+@export var cardIndex: int
 
-# todo: Factory-style method
 static func new_card(_card: Card) -> Node2D:
 	var card_scene = preload("res://Gameplay/Scenes/MainGameLoop/Game/Cards/Card.tscn")
 	var newCard := card_scene.instantiate()

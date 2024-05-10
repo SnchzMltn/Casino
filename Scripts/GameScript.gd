@@ -1,9 +1,6 @@
 extends Node
 class_name GameScript
 
-@onready var backgroundNode: Node2D = get_node("Background")
-@onready var foregroundNode: Node2D = get_node("Foreground")
-
 @onready var pitch: Pitch
 @onready var playerDeck: Deck
 @onready var oponentDeck: Deck
@@ -17,8 +14,8 @@ class_name GameScript
 
 func _init():
 	pitch = Pitch.new()
-	playerDeck = Deck.new(DefaultDecks._get_random_card_array())
-	oponentDeck = Deck.new(DefaultDecks._get_random_card_array())
+	playerDeck = Deck.new(DefaultDecks.d1CardArray)
+	oponentDeck = Deck.new(DefaultDecks.d2CardArray)
 	playerHand = _serveCardsToPlayers(playerDeck)
 	oponentHand = _serveCardsToPlayers(oponentDeck)
 	playerScore = 0
@@ -34,13 +31,8 @@ func _init():
 func _serveCardsToPlayers(deck: Deck):
 	return deck.cards.slice(0, 5)
 
-#todo: implement
-#func _takeTurn(cardPlayed: Card):
-	#pass
-
-func _process(delta):
-	foregroundNode.oponentCards = oponentHand
-	print_rich("[color=red][b]Delta value[/b] -> "+str(foregroundNode.oponentCards)+"[/color]")	
-	foregroundNode.playerCards = playerHand
-	print_rich("[color=red][b]Delta value[/b] -> "+str(foregroundNode.playerCards)+"[/color]")
-	print_rich("[color=magenta][b]Delta value[/b] -> "+str(delta)+"[/color]")
+func _enter_tree():
+	$Foreground.oponentCards = oponentHand
+	print_rich("[color=red][b]oponentCards array[/b] -> "+str($Foreground.oponentCards)+"[/color]")	
+	$Foreground.playerCards = playerHand
+	print_rich("[color=green][b]playerCards array[/b] -> "+str($Foreground.playerCards)+"[/color]")
