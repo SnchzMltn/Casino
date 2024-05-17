@@ -9,8 +9,8 @@ enum CardTypeEnum { OFFENSIVE, DEFENSIVE } # todo: include TACTICAL?
 @export var cardEffect: CardEffect
 @export var cardIndex: int
 
-static func new_card(_card: Card) -> Node2D:
-	var card_scene = preload("res://Gameplay/Scenes/MainGameLoop/Game/Cards/Card.tscn")
+static func new_card(_card: Card) -> Card:
+	var card_scene : PackedScene = load("res://Gameplay/Scenes/MainGameLoop/Game/Cards/Card.tscn")
 	var newCard := card_scene.instantiate()
 	return newCard
 
