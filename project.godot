@@ -13,7 +13,13 @@ config_version=5
 config/name="Prototype Casino"
 run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/bg_color=Color(0.843184, 0.843184, 0.843184, 1)
+boot_splash/image="res://assets/Image/Global/mascot_2.png"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=2500
+run/minimum_display_time=0
+run/bg_color=Color(0.14, 0.14, 0.14, 1)
+run/image=""
 
 [display]
 
