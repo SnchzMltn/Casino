@@ -1,12 +1,171 @@
-[gd_scene load_steps=4 format=3 uid="uid://mib1p07sij5p"]
+[gd_scene load_steps=33 format=3 uid="uid://mib1p07sij5p"]
 
 [ext_resource type="Script" path="res://Scripts/MainScript.gd" id="1_fipiv"]
 [ext_resource type="Texture2D" uid="uid://coh0qbujalfp5" path="res://assets/Image/Buttons/ButtonClosed.png" id="2_c6qem"]
-[ext_resource type="Texture2D" uid="uid://ck07h1fo5kblk" path="res://assets/Image/Buttons/ButtonOpen.png" id="3_alpg8"]
+[ext_resource type="Texture2D" uid="uid://crpp6jfgauuil" path="res://assets/Image/Menu/BG_Colour.png" id="2_nyc5i"]
+[ext_resource type="Texture2D" uid="uid://dq7siyfsvjiti" path="res://assets/Image/Menu/Panel_MainOptions.png" id="3_nimv7"]
+[ext_resource type="Texture2D" uid="uid://cdcssyx4f0fat" path="res://assets/Image/Menu/Panel_ChangeDeck.png" id="4_g31ip"]
+[ext_resource type="Texture2D" uid="uid://bilv1126ej04o" path="res://assets/Image/Menu/Panel_StartButton.png" id="5_16stu"]
+[ext_resource type="Texture2D" uid="uid://cw276i33sg4rl" path="res://assets/Image/Menu/Button_ChangeDeck.png" id="6_378ra"]
+[ext_resource type="Texture2D" uid="uid://cjjlchkax851v" path="res://assets/Image/Menu/Button_MenuCards.png" id="6_sy35p"]
+[ext_resource type="Texture2D" uid="uid://cs66ko4in2bl3" path="res://assets/Image/Menu/Hover_MenuCards01.png" id="7_ayvg5"]
+[ext_resource type="Texture2D" uid="uid://ckjlpwjpcmquq" path="res://assets/Image/Menu/Hover_ChangeDeck01.png" id="7_hvg0a"]
+[ext_resource type="Texture2D" uid="uid://6qtubg4oumtt" path="res://assets/Image/Menu/Hover_MenuCards02.png" id="8_2oqar"]
+[ext_resource type="Texture2D" uid="uid://dq8lwobnswr3i" path="res://assets/Image/Menu/Hover_ChangeDeck02.png" id="8_hauqg"]
+[ext_resource type="Texture2D" uid="uid://mv8o1rc4kbpi" path="res://assets/Image/Menu/Button_MenuOptions.png" id="12_7mhqq"]
+[ext_resource type="Texture2D" uid="uid://dc3bff0x3ndv7" path="res://assets/Image/Menu/Hover_MenuOptions01.png" id="13_euvtr"]
+[ext_resource type="Texture2D" uid="uid://6ypeuj0v8b83" path="res://assets/Image/Menu/Hover_MenuOptions02.png" id="14_lvidh"]
+[ext_resource type="Texture2D" uid="uid://4jlpcmtduikf" path="res://assets/Image/Menu/Button_MenuTutorial.png" id="15_2hk3c"]
+[ext_resource type="Texture2D" uid="uid://ds2jfy26ttima" path="res://assets/Image/Menu/Hover_MenuTutorial01.png" id="16_4q08d"]
+[ext_resource type="Texture2D" uid="uid://cb2mivhbe1gpm" path="res://assets/Image/Menu/Button_MenuQuit.png" id="16_7pji7"]
+[ext_resource type="Texture2D" uid="uid://b4lro7aa6ps1u" path="res://assets/Image/Menu/Hover_MenuTutorial02.png" id="17_53fxn"]
+[ext_resource type="Texture2D" uid="uid://bvwtraie4uu3y" path="res://assets/Image/Menu/Hover_MenuQuit01.png" id="17_70uru"]
+[ext_resource type="Texture2D" uid="uid://dvgp7iggnhd6u" path="res://assets/Image/Menu/Hover_MenuQuit02.png" id="18_f4hwj"]
+[ext_resource type="Texture2D" uid="uid://dplsl00un2aow" path="res://assets/Image/Buttons/Button_GOPressed01.png" id="22_hckfx"]
+[ext_resource type="Texture2D" uid="uid://bg6q2225isokh" path="res://assets/Image/Buttons/Button_GOPressed02.png" id="23_lf82u"]
+[ext_resource type="Texture2D" uid="uid://b2iaa8ynr7no8" path="res://assets/Image/Buttons/Button_GOHover.png" id="24_ewmv1"]
+[ext_resource type="AudioStream" uid="uid://mltjq7cd6gj" path="res://assets/Sound/UI_Button.wav" id="26_v4mw3"]
+[ext_resource type="AudioStream" uid="uid://b8f2fmebhubo2" path="res://assets/Sound/Cyberpsychosis.wav" id="27_kxtf6"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_4moy5"]
+frames = 2
+frame_0/texture = ExtResource("7_ayvg5")
+frame_0/duration = 0.15
+frame_1/texture = ExtResource("8_2oqar")
+frame_1/duration = 0.15
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_5djj2"]
+frames = 2
+frame_0/texture = ExtResource("7_hvg0a")
+frame_0/duration = 0.15
+frame_1/texture = ExtResource("8_hauqg")
+frame_1/duration = 0.15
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_gug3s"]
+frames = 2
+frame_0/texture = ExtResource("13_euvtr")
+frame_0/duration = 0.15
+frame_1/texture = ExtResource("14_lvidh")
+frame_1/duration = 0.15
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_vqrub"]
+frames = 2
+frame_0/texture = ExtResource("16_4q08d")
+frame_0/duration = 0.15
+frame_1/texture = ExtResource("17_53fxn")
+frame_1/duration = 0.15
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_h1u67"]
+frames = 2
+frame_0/texture = ExtResource("17_70uru")
+frame_0/duration = 0.15
+frame_1/texture = ExtResource("18_f4hwj")
+frame_1/duration = 0.15
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ycalx"]
+frames = 2
+frame_0/texture = ExtResource("22_hckfx")
+frame_0/duration = 0.15
+frame_1/texture = ExtResource("23_lf82u")
+frame_1/duration = 0.15
 
 [node name="Main" type="Node2D"]
 position = Vector2(481, 311)
 script = ExtResource("1_fipiv")
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 137.0
+offset_top = 72.0
+offset_right = 177.0
+offset_bottom = 112.0
+
+[node name="BG" type="TextureRect" parent="GUI"]
+layout_mode = 0
+offset_left = -618.0
+offset_top = -383.0
+offset_right = 1770.0
+offset_bottom = 1285.0
+scale = Vector2(0.403148, 0.432863)
+texture = ExtResource("2_nyc5i")
+
+[node name="PanelOptions" type="TextureRect" parent="GUI"]
+layout_mode = 0
+offset_left = -615.0
+offset_top = -338.0
+offset_right = 583.0
+offset_bottom = 848.0
+scale = Vector2(0.526997, 0.526997)
+texture = ExtResource("3_nimv7")
+
+[node name="PanelDeckBuild" type="TextureRect" parent="GUI"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = -357.0
+offset_right = 807.0
+offset_bottom = 482.0
+scale = Vector2(0.360298, 0.360298)
+texture = ExtResource("4_g31ip")
+
+[node name="PanelStart" type="TextureRect" parent="GUI"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 24.0
+offset_right = 1018.0
+offset_bottom = 728.0
+scale = Vector2(0.33601, 0.33601)
+texture = ExtResource("5_16stu")
+
+[node name="ButtonCards" type="TextureButton" parent="GUI"]
+layout_mode = 0
+offset_left = -469.0
+offset_top = -279.0
+offset_right = 628.0
+offset_bottom = 12.0
+scale = Vector2(0.356341, 0.356341)
+texture_normal = ExtResource("6_sy35p")
+texture_hover = SubResource("AnimatedTexture_4moy5")
+
+[node name="ButtonDeck" type="TextureButton" parent="GUI"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = -334.0
+offset_right = 867.0
+offset_bottom = 398.0
+scale = Vector2(0.32713, 0.32713)
+texture_normal = ExtResource("6_378ra")
+texture_hover = SubResource("AnimatedTexture_5djj2")
+
+[node name="ButtonOptions" type="TextureButton" parent="GUI"]
+layout_mode = 0
+offset_left = -489.0
+offset_top = -172.0
+offset_right = 453.0
+offset_bottom = 110.0
+scale = Vector2(0.402625, 0.402625)
+texture_normal = ExtResource("12_7mhqq")
+texture_hover = SubResource("AnimatedTexture_gug3s")
+
+[node name="ButtonTutorial" type="TextureButton" parent="GUI"]
+layout_mode = 0
+offset_left = -513.0
+offset_top = -51.0
+offset_right = 505.0
+offset_bottom = 205.0
+scale = Vector2(0.425709, 0.425709)
+texture_normal = ExtResource("15_2hk3c")
+texture_hover = SubResource("AnimatedTexture_vqrub")
+
+[node name="ButtonQuit" type="TextureButton" parent="GUI"]
+layout_mode = 0
+offset_left = -462.0
+offset_top = 86.0
+offset_right = 162.0
+offset_bottom = 296.0
+scale = Vector2(0.505632, 0.505632)
+texture_normal = ExtResource("16_7pji7")
+texture_hover = SubResource("AnimatedTexture_h1u67")
 
 [node name="Title" type="RichTextLabel" parent="."]
 layout_direction = 2
@@ -15,10 +174,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -123.0
-offset_top = -246.0
-offset_right = 130.0
-offset_bottom = -176.0
+offset_left = 562.0
+offset_top = -200.0
+offset_right = 815.0
+offset_bottom = -130.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 33
@@ -26,31 +185,48 @@ text = "CASINO project"
 metadata/_edit_use_anchors_ = true
 
 [node name="OptionsButton" type="Button" parent="."]
-offset_left = -53.0
-offset_top = 201.0
-offset_right = 40.0
-offset_bottom = 232.0
+offset_left = 659.0
+offset_top = -11.0
+offset_right = 752.0
+offset_bottom = 20.0
 text = "Options"
 language = "en_US"
 metadata/_edit_use_anchors_ = true
 
 [node name="ExitButton" type="Button" parent="."]
-offset_left = -52.0
-offset_top = 246.0
-offset_right = 41.0
-offset_bottom = 277.0
+offset_left = 652.0
+offset_top = 50.0
+offset_right = 745.0
+offset_bottom = 81.0
 text = "Exit"
 language = "en_US"
 metadata/_edit_use_anchors_ = true
 
 [node name="NewGameButton" type="TextureButton" parent="."]
-offset_left = -128.0
-offset_top = -162.0
-offset_right = 128.0
-offset_bottom = 94.0
+offset_left = 178.0
+offset_top = 54.0
+offset_right = 434.0
+offset_bottom = 310.0
 texture_normal = ExtResource("2_c6qem")
-texture_hover = ExtResource("3_alpg8")
+texture_pressed = SubResource("AnimatedTexture_ycalx")
+texture_hover = ExtResource("24_ewmv1")
 ignore_texture_size = true
 stretch_mode = 5
 
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_v4mw3")
+bus = &"SFX"
+
+[node name="BG_Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_kxtf6")
+volume_db = -20.496
+autoplay = true
+bus = &"Mx"
+
+[connection signal="mouse_entered" from="GUI/ButtonCards" to="." method="_on_button_cards_mouse_entered"]
+[connection signal="mouse_entered" from="GUI/ButtonDeck" to="." method="_on_button_deck_mouse_entered"]
+[connection signal="mouse_entered" from="GUI/ButtonOptions" to="." method="_on_button_options_mouse_entered"]
+[connection signal="mouse_entered" from="GUI/ButtonTutorial" to="." method="_on_button_tutorial_mouse_entered"]
+[connection signal="mouse_entered" from="GUI/ButtonQuit" to="." method="_on_button_quit_mouse_entered"]
+[connection signal="pressed" from="GUI/ButtonQuit" to="." method="_exitButtonPressed"]
 [connection signal="pressed" from="NewGameButton" to="." method="_newGameButtonPressed"]
