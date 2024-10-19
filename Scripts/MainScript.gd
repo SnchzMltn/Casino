@@ -29,7 +29,6 @@ func hideMenu():
 	$ExitButton.hide()
 
 func _newGameButtonPressed():
-	print("new game!!")
 	get_tree().change_scene_to_file("res://Gameplay/Scenes/NewGame/NewGame.tscn")
 
 func _optionsButtonPressed():
@@ -37,10 +36,9 @@ func _optionsButtonPressed():
 	#todo: implement a Scene for [get_tree().change_scene_to_file()]
 
 func _exitButtonPressed():
-	print("Exit")
 	get_tree().quit()
 
 func _ready():
-	NewGameButton.pressed.connect(self._newGameButtonPressed)
+	#NewGameButton.pressed.connect(self._newGameButtonPressed)
 	OptionsButton.pressed.connect(self._optionsButtonPressed)
 	ExitButton.pressed.connect(self._exitButtonPressed)
