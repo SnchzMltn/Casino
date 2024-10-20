@@ -8,5 +8,7 @@
 script = ExtResource("1_oeqrg")
 
 [node name="Background" parent="." instance=ExtResource("1_upxbh")]
+z_index = -1
 
 [node name="Foreground" parent="." instance=ExtResource("2_2t1sg")]
+z_index = 1
