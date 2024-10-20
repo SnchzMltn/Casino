@@ -44,3 +44,23 @@ func _ready():
 	NewGameButton.pressed.connect(self._newGameButtonPressed)
 	OptionsButton.pressed.connect(self._optionsButtonPressed)
 	ExitButton.pressed.connect(self._exitButtonPressed)
+
+
+func _on_button_cards_mouse_entered() -> void:
+	$SFX.play()
+
+
+func _on_button_deck_mouse_entered() -> void:
+	$SFX.play()
+
+
+func _on_button_options_mouse_entered() -> void:
+	$SFX.play()
+
+
+func _on_button_tutorial_mouse_entered() -> void:
+	$SFX.play()
+
+
+func _on_button_quit_mouse_entered() -> void:
+	$SFX.play()
