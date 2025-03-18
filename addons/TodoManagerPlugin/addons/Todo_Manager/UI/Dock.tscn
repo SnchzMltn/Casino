@@ -1,8 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://b6k0dtftankcx"]
 
-[ext_resource type="Script" path="res://addons/Todo_Manager/Dock.gd" id="1"]
-[ext_resource type="Script" path="res://addons/Todo_Manager/Project.gd" id="2"]
-[ext_resource type="Script" path="res://addons/Todo_Manager/Current.gd" id="3"]
+[sub_resource type="Resource" id="Resource_k3spn"]
+metadata/__load_path__ = "res://addons/Todo_Manager/Dock.gd"
+
+[sub_resource type="Resource" id="Resource_s7arv"]
+metadata/__load_path__ = "res://addons/Todo_Manager/Project.gd"
+
+[sub_resource type="Resource" id="Resource_tvogi"]
+metadata/__load_path__ = "res://addons/Todo_Manager/Current.gd"
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_kqxcu"]
 
@@ -17,7 +22,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
-script = ExtResource("1")
+script = SubResource("Resource_k3spn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -60,7 +65,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("2")
+script = SubResource("Resource_s7arv")
 
 [node name="Tree" type="Tree" parent="VBoxContainer/TabContainer/Project"]
 layout_mode = 1
@@ -76,7 +81,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("3")
+script = SubResource("Resource_tvogi")
 
 [node name="Tree" type="Tree" parent="VBoxContainer/TabContainer/Current"]
 layout_mode = 1

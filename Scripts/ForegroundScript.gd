@@ -31,29 +31,33 @@ func setCardRotation(cardInstance, i: int, oponent := false):
 			cardInstance.position.y -= 5
 		if (i == 4):
 			cardInstance.position.y -= 25
-	else:
-		if (i == 0):
-			cardInstance.position.y += 25
-		if (i == 1):
-			cardInstance.position.y += 5
-		if (i == 3):
-			cardInstance.position.y += 5
-		if (i == 4):
-			cardInstance.position.y += 25
+	#else:
+		#if (i == 0):
+			#cardInstance.position.y += 25
+		#if (i == 1):
+			#cardInstance.position.y += 5
+		#if (i == 3):
+			#cardInstance.position.y += 5
+		#if (i == 4):
+			#cardInstance.position.y += 25
 
 func addHandToScene(cards: Array, oponent := false):
 	for i in range(cards.size()):
 		var card : Card = cards[i]
 		var cardPositionXAxis := ((DisplayServer.window_get_size().x - HORIZONTAL_PADDING_PX)/cards.size()) * i
-		var newInstance := Card.new_card(card)
 		# have to remove two and a half times the card_width
-		newInstance.position.x = cardPositionXAxis - (2.5 * (CARD_WIDTH_PX/2))
 		var yAxisConstant = DisplayServer.window_get_size().y/3
+		var newInstance := Card.new_card(card)
+		newInstance.position.x = cardPositionXAxis - (2.5 * (CARD_WIDTH_PX/2))
 		newInstance.position.y = yAxisConstant*(-1) if (oponent) else yAxisConstant
-		setCardRotation(newInstance, i, oponent)
+		#setCardRotation(newInstance, i, oponent)
 		var spriteNode := newInstance.get_node("Area2D").get_node("Sprite2D");
 		var areaNode := newInstance.get_node("Area2D");
 		var collisionShapeNode := newInstance.get_node("Area2D").get_node("CollisionShape2D");
+		
+		spriteNode.position.y = newInstance.position.y
+		areaNode.position.y = newInstance.position.y
+		collisionShapeNode.position.y = newInstance.position.y
 
 		spriteNode.rotation = OPONENT_CARD_ROTATION_IN_RAD.get(i) if (oponent) else CARD_ROTATION_IN_RAD.get(i);
 		areaNode.rotation = OPONENT_CARD_ROTATION_IN_RAD.get(i) if (oponent) else CARD_ROTATION_IN_RAD.get(i);

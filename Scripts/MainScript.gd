@@ -39,9 +39,10 @@ func _exitButtonPressed():
 	get_tree().quit()
 
 func _ready():
+	pass
 	#NewGameButton.pressed.connect(self._newGameButtonPressed)
-	OptionsButton.pressed.connect(self._optionsButtonPressed)
-	ExitButton.pressed.connect(self._exitButtonPressed)
+	#OptionsButton.pressed.connect(self._optionsButtonPressed)
+	#ExitButton.pressed.connect(self._exitButtonPressed)
 
 
 func _on_button_cards_mouse_entered() -> void:
