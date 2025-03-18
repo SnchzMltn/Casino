@@ -1,11 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://bie1xn8v1kd66"]
 
-[ext_resource type="Script" path="res://addons/Todo_Manager/ColourPicker.gd" id="1"]
+[sub_resource type="Resource" id="Resource_tp72t"]
+metadata/__load_path__ = "res://addons/Todo_Manager/ColourPicker.gd"
 
 [node name="TODOColour" type="HBoxContainer"]
 offset_right = 105.0
 offset_bottom = 31.0
-script = ExtResource("1")
+script = SubResource("Resource_tp72t")
 metadata/_edit_use_custom_anchors = false
 
 [node name="Label" type="Label" parent="."]

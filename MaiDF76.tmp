@@ -1,6 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://mib1p07sij5p"]
+[gd_scene load_steps=33 format=3 uid="uid://mib1p07sij5p"]
 
-[ext_resource type="Script" uid="uid://bix5xwbtnl5o" path="res://Scripts/MainScript.gd" id="1_fipiv"]
+[ext_resource type="Script" path="res://Scripts/MainScript.gd" id="1_fipiv"]
 [ext_resource type="Texture2D" uid="uid://coh0qbujalfp5" path="res://assets/Image/Buttons/ButtonClosed.png" id="2_c6qem"]
 [ext_resource type="Texture2D" uid="uid://crpp6jfgauuil" path="res://assets/Image/Menu/BG_Colour.png" id="2_nyc5i"]
 [ext_resource type="Texture2D" uid="uid://dq7siyfsvjiti" path="res://assets/Image/Menu/Panel_MainOptions.png" id="3_nimv7"]
@@ -25,7 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://bg6q2225isokh" path="res://assets/Image/Buttons/Button_GOPressed02.png" id="23_lf82u"]
 [ext_resource type="Texture2D" uid="uid://b2iaa8ynr7no8" path="res://assets/Image/Buttons/Button_GOHover.png" id="24_ewmv1"]
 [ext_resource type="AudioStream" uid="uid://mltjq7cd6gj" path="res://assets/Sound/UI_Button.wav" id="26_v4mw3"]
-[ext_resource type="Script" uid="uid://dtvh83s7uirqv" path="res://Scripts/WebsocketClient.gd" id="27_6sqey"]
 [ext_resource type="AudioStream" uid="uid://b8f2fmebhubo2" path="res://assets/Sound/Cyberpsychosis.wav" id="27_kxtf6"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_4moy5"]
@@ -169,12 +168,10 @@ texture_normal = ExtResource("16_7pji7")
 texture_hover = SubResource("AnimatedTexture_h1u67")
 
 [node name="NewGameButton" type="TextureButton" parent="GUI"]
-layout_mode = 0
 offset_left = 41.0
 offset_top = -18.0
 offset_right = 297.0
 offset_bottom = 238.0
-tooltip_text = "Start a game!"
 texture_normal = ExtResource("2_c6qem")
 texture_pressed = SubResource("AnimatedTexture_ycalx")
 texture_hover = ExtResource("24_ewmv1")
@@ -190,9 +187,6 @@ stream = ExtResource("27_kxtf6")
 volume_db = -20.496
 autoplay = true
 bus = &"Mx"
-
-[node name="WebsocketClient" type="Node" parent="."]
-script = ExtResource("27_6sqey")
 
 [connection signal="mouse_entered" from="GUI/ButtonCards" to="." method="_on_button_cards_mouse_entered"]
 [connection signal="mouse_entered" from="GUI/ButtonDeck" to="." method="_on_button_deck_mouse_entered"]
